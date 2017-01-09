@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-flexirest",
-  "version": "2.1.1",
+  "version": "2.2.1",
   "description": "Loopback FLEXI REST Connector",
   "repository": {
     "type": "git",
@@ -22,11 +22,12 @@
   "dependencies": {
     "debug": "^2.1.1",
     "loopback-connector-rest": "^2.0.0",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "require-uncached": "^1.0.3"
   },
   "devDependencies": {
-   "chai-http": "^3.0.0",
-   "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "chai": "^3.5.0",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "eslint-html-reporter": "^0.4.14",

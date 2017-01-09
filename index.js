@@ -5,6 +5,7 @@ var path = require('path');
 var walk = require('./lib/walk');
 var url = require('url');
 var transformerLib = require('./lib/transformer');
+var requireUncached = require('require-uncached');
 
 /**
  * Export the initialize method to loopback-datasource-juggler
@@ -24,7 +25,7 @@ exports.initialize = function initializeDataSource(dataSource, callback) {
        endpointTemplates.forEach(function(templateFile){
 
            debug('Found JSON file', templateFile);
-           var defintion = require(templateFile);
+           var defintion = requireUncached(templateFile);
            defintion.file = templateFile;
 
            if(defintion && defintion.template && defintion.functions) {
