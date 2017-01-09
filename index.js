@@ -3,7 +3,6 @@ var debug = require('debug')('loopback:connector:flexirest');
 var RestConnector = require('loopback-connector-rest');
 var path = require('path');
 var walk = require('./lib/walk');
-var url = require('url');
 var transformerLib = require('./lib/transformer');
 var requireUncached = require('require-uncached');
 
@@ -33,7 +32,7 @@ exports.initialize = function initializeDataSource(dataSource, callback) {
                debug('Adding template to settings.operations');
 
                if (baseURL) {
-                   defintion.template.url = url.resolve(baseURL, defintion.template.url);
+                   defintion.template.url = baseURL + defintion.template.url;
                }
 
                settings.operations.push(defintion);
