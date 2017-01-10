@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-flexirest",
-  "version": "2.2.1",
+  "version": "2.1.3",
   "description": "Loopback FLEXI REST Connector",
   "repository": {
     "type": "git",
